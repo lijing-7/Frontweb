@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <!-- 淡黄色与浅绿色或橘黄色般配 -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <!--  -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <!-- 新 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <link  rel="stylesheet" type="text/css" href="css/signupTable.css" ></link>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div id="container-maxbox">
+               <div id="enter—title">
+                   <div class="title-caracter">小升初</div>
+                   <div class="title-caracter-last">网上报名</div>
+                   <div class="horizenline"></div>
+               </div>
+               <div id="school-choice">
+                    <div id="choiceBox"> 
+                        <div class="choice-1">您孩子选择的学校为：</div>
+                        <div class="choice-2"> 天津中学</div>
+                    </div>   
+               </div>
+               <div id="shoole-table">
+                   <div id="table-title">学校报名/查看/修改</div>
+                   <div class="table-a">
+                        <table class="table table-bordered table-hover" id="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">学校名称</th>
+                                <th scope="col">招生计划数</th>
+                                <th scope="col">已报名人数</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td >
+                                    <div class="pretty p-default p-curve">
+                                        <input type="radio" name="radio-school"  id="choiced-school" />
+                                        <div class="state p-warning-o">
+                                            <label>天津明德珠海中学</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td >
+                                    <div class="pretty p-default p-curve">
+                                        <input type="radio" name="radio-school"  id="choiced-school" />
+                                        <div class="state p-warning-o">
+                                            <label>天津第十中学</label>
+                                        </div>
+                                    </div>
+                                 </td>
+                                 <td>Otto</td>
+                                 <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td >
+                                    <div class="pretty p-default p-curve">
+                                        <input type="radio" name="radio-school"  id="choiced-school" />
+                                        <div class="state p-warning-o">
+                                            <label>天津第十中学</label>
+                                        </div>
+                                    </div>
+                                 </td>
+                                 <td>Otto</td>
+                                 <td>@mdo</td>
+                            </tr>
+                            </tbody>
+                    </table>
+                   </div>
+                   <div id="updateoandexit">
+                      <div id="button-1" style="float: left;margin:0px 150px;">
+                        <button type="button" class="btn btn-sm" style="background-color:rgb(245, 145, 52) ;">确认修改</button>
+                      </div>
+                      <div class="button-2" style="float: left;" >
+                        <button type="button" class="btn btn-sm" style="background-color:rgb(245, 145, 52) ;">退&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出</button> 
+                      </div>
+                    
+                   </div>
+               </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+<script>
+    var lasttd;
+    var lastcolor;
+    var isDefualtAdd = 0; //0不选中，1选中
+    //点击事件
+    $('input[name="radio-school"').click(function(){
+        if(lasttd){  
+            lasttd.css('background',lastcolor);  
+            } 
+            lastcolor=$(this).parents("tr").css('background-color');  
+            console.log(lastcolor);
+        var $radio = $(this);
+        if ($radio.data('waschecked') == true){
+            $radio.prop('checked', false); $radio.data('waschecked', false);
+            isDefualtAdd = 0;
+            if(!lastcolor) {
+            lastcolor=$(this).parents("tr").css('background');
+            }  
+            lasttd=$(this).parents("tr");  
+        } else {
+            $radio.prop('checked', true); $radio.data('waschecked', true);
+            isDefualtAdd = 1;
+        }
+    }); 
+  //触发事件
+    $('input[name="radio-school"]').change(function(){
+        if(lasttd){  
+        lasttd.css('background',lastcolor);  
+        } 
+        lastcolor=$(this).parents("tr").css('background-color');  
+        if(!lastcolor) {
+        lastcolor=$(this).parents("tr").css('background');
+        console.log($(this).parents("tr").css('background'));
+        }  
+        $(this).parents("tr").css('background','#FFFF99'); 
+        lasttd=$(this).parents("tr");    
+    })
+</script>
+<style>
+
+</style>

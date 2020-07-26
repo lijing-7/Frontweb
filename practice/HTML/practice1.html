@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <!-- 设置文档编码 -->
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <!--  -->
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <!-- 新 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+        <!-- CSS样式 -->
+        <link href="practice.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.1/css/swiper.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.1/js/swiper.js"></script>
+        <link rel="stylesheet" href="iconfont.css">
+    </head>
+    <body>
+        <div class="container" >
+            <div class="row" >
+                <div id="row-1" style="box-shadow:0px 10px 35px rgb(225, 225, 225);"> 
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="header" >
+                            <div class="header-top" style="color: rgb(90, 77, 77);" >
+                            <span>
+                                <img src="../image/edit (1).png"  class="">
+                                <button type="button" class="btn btn-light" style="padding: 0px;background-color: transparent;color: rgb(153, 153, 153);font-size: 16px;">登录</button>
+                                &nbsp;&nbsp;&nbsp;
+                                <img src="../image/management1.png">
+                                <button type="button" class="btn btn-light" style="padding: 0px;background-rcolor: transparent;color: rgb(153, 153, 153);font-size: 16px;">管理</button>
+    
+                              <!-- <div class="btn-img" style="border: 1px;width: 20%; ;height: 100%;"> -->
+                                <input type="text" name="search" aria-describedby="button-addon1" class="input-one" style="margin-left: 3px;border-radius: 1em;overflow: hidden;" />
+                                <button class="btn" type="button" id="button-addon1" style="padding: 0;"><img src="../image/ser.png" alt=""></button>
+                               <!-- </div> -->
+                            </span>
+                            </div>
+                            <div class="header-middle">
+                                <span>
+                                    <div class="box1" style="font-family:STHeiti;font-size: 32px;font-weight: bolder;color: rgb(7, 103, 148);">高校思政课堂 </div>&nbsp;&nbsp;
+                                    <div class="box2" >管&nbsp;理&nbsp;系&nbsp;统</div>
+                                </span>
+                            </div>
+                            <div class="header-end" >
+                            <ul class="nav" >
+                                <li class="nav-item">
+                                <a class="nav-link"  href="#">首页</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#newnotice">新闻通知</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">展示公告</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">课程管理</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">活动统计</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#datastore">资料库</a>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+          <!-- 轮播图 -->
+           <div class="row" >
+               <div id="row-2">
+                    <div class="col-md-2" ></div>
+                    <div class="col-md-8">
+                        <div id="Carouselfigure" > 
+                            <div id= "parent">
+                                <div id="uls">
+                                    <ul id="img_ul">
+                                        <li><img src="../image/lunbo1.jpg"/></li>
+                                        <li><img src="../image/lunbo2.jpg"/></li>
+                                        <li><img src="../image/lunbo3.jpg"/></li>
+                                        <!-- <li><img src="imgs/3.jpg"/></li>
+                                        <li><img src="imgs/4.jpg"/></li> -->
+                                    </ul>
+                                    <!-- <ul id='litCir_ul'></ul> -->
+                                </div>
+                                <div id="buttons">
+                                    <span id="left">&lt;</span>
+                                    <span id="right">&gt;</span>
+                                </div>
+                            </div>
+                            <div id="children">
+                                <ul id='litCir_ul'></ul>
+                            </div>
+                        </div>  
+                    </div>
+               </div>                   
+           </div>
+
+           <!-- 最新公告 -->
+           <div class="row">
+                <div id="row-3">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8" style="text-align: left; margin-left: 10px;line-height: 50px;">
+                        <span > 
+                            <img src="../image/notice2.png" style="height: 30px;width:40px;" alt="">
+                        </span>
+                        <span style="color:white;margin-left: 5px;font-size: 18px;font-weight: bold;">               
+                                最新公告：政治思想工作的重要性，培养学科核心素养，滚屏新闻
+                         </span>
+                    </div>
+                </div>
+            </div>
+
+        <!-- 大框div -->
+        <div class="bgMAX">
+
+           <!-- 新闻通知 -->
+           <div class="row">
+               <div>
+                    <div class="col-md-2"></div>
+                        <div class="col-md-8" style="background-color: white; height: 250px;margin-top: 30px;"  >
+                            <!-- 新闻通知图片显示 -->
+                            <div class="newsReport">
+                               <div id="newsTitle">
+                                   <div id="verticalLine"> </div>
+                                   <div id="newLink">
+                                       <div id="newnotice" >新闻通知</div>
+                                       <!-- type="button" class="btn btn-light" style="color: rgb(153, 153, 153);font-size: 16px;" -->
+                                       <div style="float: right;text-align: right;width: 270px;height: 50px;line-height: 50px;">
+                                        <button class="btn btn-light button-prev"  style="outline: none;padding: 0px;background-color: transparent;"><svg class="bi bi-chevron-left" width="1em" height="1em" style="color: blue;" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                                          </svg></button>
+                                        <button class="btn btn-light button-next" style="outline: none; padding: 0px;background-color: transparent;"><svg class="bi bi-chevron-right" width="1em" height="1em" style="color: blue;" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                          </svg></button>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div id="newsDetail">
+                                   <!-- 多页面轮播图 -->
+                                   <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                        <ul style="list-style:none;">
+                                                            <li style="float: left;width: 50%;margin-right:0px;">      
+                                                                <img src="../image/lunbo1.jpg" style="height: 100px;width: 180px;margin-top: 13px;" alt="">
+                                                                <div style="width: 180px;">
+                                                                    <div class="newDAFon" ><a href="#">
+                                                                        重磅!在经历中学习---疫情防控公开课
+                                                                    </a></div>
+                                                                    <div id="newData">2019-08-11</div>
+                                                                </div>
+                                                            </li>
+                                                            <li style="float: left;"><img src="../image/lunbo2.jpg" style="height: 100px;width: 180px;margin-top: 13px;" alt="">
+                                                                <div style="width: 180px;">
+                                                                    <div class="newDAFon"><a href="#">
+                                                                        重磅!在经历中学习---疫情防控公开课
+                                                                    </a></div>
+                                                                    <div id="newData">2019-08-11</div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                </div>
+                                                <div class="swiper-slide">Slide 2</div>
+                                                <div class="swiper-slide">Slide 3</div>
+                                                <div class="swiper-slide">Slide 4</div>
+                                                <div class="swiper-slide">Slide 5</div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                       
+                                 </div>
+                               </div>
+                            </div>
+                            <!-- 新闻通知列表显示 -->
+                            <div class="newList">
+                                <div class="newList-more" style="text-align: right;">
+                                    <div style="padding-top: 25px;">
+                                    <a href="#"  >更多<svg class="bi bi-chevron-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                      </svg></a></div>
+                                </div>
+                                <div id="newList-list">
+                                    <div class="table-a">
+                                        <table class="table table-hover" style="border-top: 2px solid ;">
+                                            <tr>
+                                                <td style="width: 75%"><a href="#">
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                                <td>2018-09-03</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                                <td>2018-09-03</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                                <td>2018-09-03</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                                <td>2018-09-03</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                                <td>2018-09-03</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+               </div>
+           </div>
+
+            <!-- 资料库and展示公告 -->
+            <div class="row">
+                <div>
+                    <div class="col-md-2"></div>
+                        <div class="col-md-8" style=" height: 350px;margin-top: 20px;"  >
+                            <!-- 资料库显示模块 -->
+                            <div class="dataBank" style="border-radius: 1em;">
+                               <div id="dataBank-Title">
+                                   <div id="datastore" style="height: 10%;">
+                                    资料库 
+                                   </div>
+                                   <div class="dada-a" style="padding-top: 10px;">
+                                        <a href="#"  >更多<svg class="bi bi-chevron-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                       </svg></a>
+                                    </div>
+                                   <!-- <div id="horLine" style="height: 2px;border-width: 100px;float: right;"></div> -->
+                               </div>
+                               <div class="dataBank-Detail">            
+                                   <ul id="uu">
+                                       <li><div id="alldivchangecolor"><A href="#"  style="display:block;">
+                                           <div style="float: left;"><img src="../image/lunbo1.jpg" style="width: 65px;height: 50px;" alt=""></div>
+                                           <div style="float: left;">
+                                               <div>思政课改革创新永远在路上</div>
+                                               <div>2019-06-09</div>
+                                           </div>
+                                       </A></div></li>       
+                                       <li><div id="alldivchangecolor"><A href="#"  style="display:block;">
+                                        <div style="float: left;"><img src="../image/lunbo1.jpg" style="width: 65px;height: 50px;" alt=""></div>
+                                        <div style="float: left;">
+                                            <div>思政课改革创新永远在路上</div>
+                                            <div>2019-06-09</div>
+                                        </div>
+                                    </A></div></li>    
+                                    <li><div id="alldivchangecolor"><A href="#"  style="display:block;">
+                                        <div style="float: left;"><img src="../image/lunbo1.jpg" style="width: 65px;height: 50px;" alt=""></div>
+                                        <div style="float: left;">
+                                            <div>思政课改革创新永远在路上</div>
+                                            <div>2019-06-09</div>
+                                        </div>
+                                    </A></div></li>    
+                                    <li><div id="alldivchangecolor"><A href="#"  style="display:block;">
+                                        <div style="float: left;"><img src="../image/lunbo1.jpg" style="width: 65px;height: 50px;" alt=""></div>
+                                        <div style="float: left;">
+                                            <div>思政课改革创新永远在路上</div>
+                                            <div>2019-06-09</div>
+                                        </div>
+                                    </A></div></li>      
+                                   </ul>
+                               </div>
+                            </div>
+                            <!-- 展示公告模块 -->
+                            <div class="showNotice" >
+                                <div id="showNotice-title">
+                                        <div id="datastore">
+                                            展示公告
+                                           </div>
+                                           <div class="dada-a" style="padding-top: 10px;width: 470px;">
+                                            <a href="#"  >更多<svg class="bi bi-chevron-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                           </svg></a>
+                                        </div>
+                                </div>
+                                <!-- 公告展示列表 -->
+                                <div id="showNotice-list">
+                                    <div class="table-a">
+                                        <table class="table table-hover" >
+                                            <tr>
+                                                <td>2018-09-03</td>
+                                                <td style="width: 75%"><a href="#">
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-03</td>
+                                                <td style="width: 75%"><a href="#">
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-03</td>
+                                                <td style="width: 75%"><a href="#">
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-03</td>
+                                                <td style="width: 75%"><a href="#">
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-03</td>
+                                                <td style="width: 75%"><a href="#">
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-03</td>
+                                                <td style="width: 75%"><a href="#">
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-03</td>
+                                                <td style="width: 75%"><a href="#">
+                                                    思政课改革创新永远在路上
+                                                </a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+               </div>
+            </div>
+
+            <!-- 课程管理 -->
+            <div class="row">
+                <div>
+                    <div class="col-md-2"></div>
+                        <div class="col-md-8" style="background-color:white; height: 350px;margin-top: 20px;"  >
+                            <!-- 课程模块 -->
+                            <div class="classManageMent" style="height: 550px; background-color: whitesmoke;">
+                                <!--下划线 style="border-bottom: 1px solid silver;" -->
+                               <div id="classManageMent-nav" >
+                                    <div id="datastore" style="height: 50%;">
+                                        课程
+                                    </div>
+                                    <div class="class-nav" style="float: left;">
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">基础</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">提高</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">精选</a>
+                                            </li> 
+                                          </ul>
+                                    </div>
+                                    
+                               </div>
+                               <div id="classManageMent-list">  
+                                   <!-- 内容区 -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                            <ul style="list-style:none;">
+                                                <li style="float: left;width: 23%;margin-right:3px;height: 140px;margin-left:12px;">     
+                                                    <div style="height: 218;width: 180px;">
+                                                        <img src="../image/lunbo1.jpg" style="height: 50px;width: 180px;margin-top: 13px;" alt="">
+                                                        <div style="width: 180px;" style="padding:0px 3px;">
+                                                            <div class="newclass"  style="font-size: 14px;margin: 1px;">
+                                                                2020考研政治公开课
+                                                            </div>
+                                                            <div style="font-size: 12px;margin: 2px;">
+                                                                讲解逻辑清晰,是你的不二之选,最佳之选
+                                                            </div>
+                                                            <div id="newData" style="font-size: 12px;margin-top: 1px;">
+                                                               <div style="float: left;">主讲人 肖教授</div>
+                                                               <div style="float: left;">2019-06-09</div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li><li style="float: left;width: 23%;margin-right:3px;height: 140px;">     
+                                                    <div style="height: 218;width: 180px;">
+                                                        <img src="../image/lunbo1.jpg" style="height: 50px;width: 180px;margin-top: 13px;" alt="">
+                                                        <div style="width: 180px;" style="padding:0px 3px;">
+                                                            <div class="newclass"  style="font-size: 14px;margin: 1px;">
+                                                                2020考研政治公开课
+                                                            </div>
+                                                            <div style="font-size: 12px;margin: 2px;">
+                                                                讲解逻辑清晰,是你的不二之选,最佳之选
+                                                            </div>
+                                                            <div id="newData" style="font-size: 12px;margin-top: 1px;">
+                                                               <div style="float: left;">主讲人 肖教授</div>
+                                                               <div style="float: left;">2019-06-09</div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li style="float: left;width: 23%;margin-right:3px;height: 140px;">     
+                                                    <div style="height: 218;width: 180px;">
+                                                        <img src="../image/lunbo1.jpg" style="height: 50px;width: 180px;margin-top: 13px;" alt="">
+                                                        <div style="width: 180px;" style="padding:0px 3px;">
+                                                            <div class="newclass"  style="font-size: 14px;margin: 1px;">
+                                                                2020考研政治公开课
+                                                            </div>
+                                                            <div style="font-size: 12px;margin: 2px;">
+                                                                讲解逻辑清晰,是你的不二之选,最佳之选
+                                                            </div>
+                                                            <div id="newData" style="font-size: 12px;margin-top: 1px;">
+                                                               <div style="float: left;">主讲人 肖教授</div>
+                                                               <div style="float: left;">2019-06-09</div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li style="float: left;width: 23%;margin-right:3px;height: 140px;">     
+                                                    <div style="height: 218;width: 180px;">
+                                                        <img src="../image/lunbo1.jpg" style="height: 50px;width: 180px;margin-top: 13px;" alt="">
+                                                        <div style="width: 180px;" style="padding:0px 3px;">
+                                                            <div class="newclass"  style="font-size: 14px;margin: 1px;">
+                                                                2020考研政治公开课
+                                                            </div>
+                                                            <div style="font-size: 12px;margin: 2px;">
+                                                                讲解逻辑清晰,是你的不二之选,最佳之选
+                                                            </div>
+                                                            <div id="newData" style="font-size: 12px;margin-top: 1px;">
+                                                               <div style="float: left;">主讲人 肖教授</div>
+                                                               <div style="float: left;">2019-06-09</div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li style="float: left;width: 23%;margin-right:3px;height: 140px;margin-left:12px;">     
+                                                    <div style="height: 218;width: 180px;">
+                                                        <img src="../image/lunbo2.jpg" style="height: 50px;width: 180px;margin-top: 13px;" alt="">
+                                                        <div style="width: 180px;" style="padding:0px 3px;">
+                                                            <div class="newclass"  style="font-size: 14px;margin: 1px;">
+                                                                2020考研政治公开课
+                                                            </div>
+                                                            <div style="font-size: 12px;margin: 2px;">
+                                                                讲解逻辑清晰,是你的不二之选,最佳之选
+                                                            </div>
+                                                            <div id="newData" style="font-size: 12px;margin-top: 1px;">
+                                                               <div style="float: left;">主讲人 肖教授</div>
+                                                               <div style="float: left;">2019-06-09</div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li style="float: left;width: 23%;margin-right:3px;height: 140px;">     
+                                                    <div style="height: 218;width: 180px;">
+                                                        <img src="../image/lunbo2.jpg" style="height: 50px;width: 180px;margin-top: 13px;" alt="">
+                                                        <div style="width: 180px;" style="padding:0px 3px;">
+                                                            <div class="newclass"  style="font-size: 14px;margin: 1px;">
+                                                                2020考研政治公开课
+                                                            </div>
+                                                            <div style="font-size: 12px;margin: 2px;">
+                                                                讲解逻辑清晰,是你的不二之选,最佳之选
+                                                            </div>
+                                                            <div id="newData" style="font-size: 12px;margin-top: 1px;">
+                                                               <div style="float: left;">主讲人 肖教授</div>
+                                                               <div style="float: left;">2019-06-09</div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li style="float: left;width: 23%;margin-right:3px;height: 140px;">     
+                                                    <div style="height: 218;width: 180px;">
+                                                        <img src="../image/lunbo2.jpg" style="height: 50px;width: 180px;margin-top: 13px;" alt="">
+                                                        <div style="width: 180px;" style="padding:0px 3px;">
+                                                            <div class="newclass"  style="font-size: 14px;margin: 1px;">
+                                                                2020考研政治公开课
+                                                            </div>
+                                                            <div style="font-size: 12px;margin: 2px;">
+                                                                讲解逻辑清晰,是你的不二之选,最佳之选
+                                                            </div>
+                                                            <div id="newData" style="font-size: 12px;margin-top: 1px;">
+                                                               <div style="float: left;">主讲人 肖教授</div>
+                                                               <div style="float: left;">2019-06-09</div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                              
+                                                <li style="float: left;width: 23%;margin-right:3px;height: 140px;">     
+                                                    <div style="height: 218;width: 180px;">
+                                                        <img src="../image/lunbo2.jpg" style="height: 50px;width: 180px;margin-top: 13px;" alt="">
+                                                        <div style="width: 180px;" style="padding:0px 3px;">
+                                                            <div class="newclass"  style="font-size: 14px;margin: 1px;">
+                                                                2020考研政治公开课
+                                                            </div>
+                                                            <div style="font-size: 12px;margin: 2px;">
+                                                                讲解逻辑清晰,是你的不二之选,最佳之选
+                                                            </div>
+                                                            <div id="newData" style="font-size: 12px;margin-top: 1px;">
+                                                               <div style="float: left;">主讲人 肖教授</div>
+                                                               <div style="float: left;">2019-06-09</div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                              
+                                              
+                                                
+                                             
+                                                
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">..11111111.</div>
+                                        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">..111111.</div>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+               </div>
+            </div>
+
+            <!-- 活动统计 -->
+            <div class="row">
+                <div>
+                    <div class="col-md-2"></div>
+                        <div class="col-md-8" style="background-color:rgb(241, 241, 241);height: 320px;"  >
+                            <!-- 活动统计模块 -->
+                            <div class="active1" style="background-color:white; height: 420px;margin-top: 20px;">
+                               <div id="active1-title" >
+                                <div id="verticalLine"> </div>
+                                <div id="datastore" style="margin-left: -8px;">
+                                    课表详情
+                                   </div>
+                               </div>
+                               <div id="active1-chart">  
+                                   <!-- <P>统计图表</P> -->
+                                    <div id="active1-chart-search">   
+                                        <div class=" " style="float: left;" >
+                                            <div class="team" style="float: left;width: 50px;">
+                                                <label class=""  for="inputGroupSelect01">学&nbsp;期</label>
+                                            </div>
+                                                <select class="" id="inputGroupSelect01">
+                                                    <option selected>1</option>
+                                                    <option value="1">2</option>
+                                                    <option value="2">3</option>
+                                                    <option value="3">4</option>
+                                                    </select>
+                                        </div>
+
+                                        <div class=" " style="float: left;">
+                                            <div class="team" style="float: left;width: 80px;">
+                                                <label class=""  for="inputGroupSelect01">教&nbsp;学&nbsp;周</label>
+                                            </div>
+                                                <select class="" id="inputGroupSelect01">
+                                                    <option selected>1</option>
+                                                    <option value="1">2</option>
+                                                    <option value="2">3</option>
+                                                    <option value="3">4</option>
+                                                    </select>
+                                        </div>
+
+                                        <div class=" " style="float: left;margin-left: 20px;">
+                                            <div style="float: left;width: 30px;">
+                                                <button type="button" class="btn btn-light">查询</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="active1-chart-detail">
+                                         <table class="table table-hover  table-bordered">
+                                            <thead>
+                                              <tr>
+                                                <th >序号</th>
+                                                <th >星期一</th>
+                                                <th >星期二</th>
+                                                <th >星期三</th>
+                                                <th >星期四</th>
+                                                <th >星期五</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">第1~2节</th>
+                                                <td>马克思主义基本原理概论</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">第3~4节</th>
+                                                <td></td>
+                                                <td>《毛泽东思想和中国特色社会主义概论》</td>
+                                                <td>《毛泽东思想和中国特色社会主义概论》</td>
+                                                <td></td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">第5~6节</th>
+                                                <td></td>
+                                                <td>《毛泽东思想和中国特色社会主义概论》</td>
+                                                <td>《中国近现代史纲要》</td>
+                                                <td></td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">第7~8节</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td>《思想道德修养和法律基础》</td>
+                                                <td></td>
+                                                <td>《思想道德修养和法律基础》</td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">第9~10节</th>
+                                                <td></td>
+                                                <td>《毛泽东思想和中国特色社会主义概论》</td>
+                                                <td></td>
+                                                <td>《毛泽东思想和中国特色社会主义概论》</td>
+                                                <td></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+
+
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+               </div>
+
+            </div>
+
+        </div>
+
+            <!-- 底部Footer -->
+            <div class="row">
+                <div class="row">
+                    <div id="row-5" >
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <!-- 底部联系方式 -->
+                            <div class="footer-detail" >
+                                <!-- 高校名称 -->
+                                <div id="footer-detail-name" style="text-align: center;">
+                                    <div style="font-weight: bold;color: white;font-size: 28px;margin-top: 50px;">高校思政课堂</div>
+                                    <div class="box3" >管&nbsp;理&nbsp;系&nbsp;统</div>
+                                </div>
+                                <!-- 联系ul列表 -->
+                                <div id="footer-detail-list">
+                                    <ul style="list-style:none;">
+                                        <li style="float: left;width: 50%;">
+                                            <div class="F-maxbbox">
+                                                <div id="relativeway" >联系方式</div>
+                                                <div class="dizhi">
+                                                    <ul style="list-style: none;">
+                                                        <li>地址:天津海河教育园呀官员</li>
+                                                        <li>地址:天津海河教育园呀官员</li>
+                                                        <li>地址:天津海河教育园呀官员</li>
+                                                        <li>地址:天津海河教育园呀官员</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        
+                                        </li>
+                                        <li style="float: left;width: 50%;">
+                                            <div>
+                                                <div id="focus" >关注我们</div>
+                                                <div style="color: white;">
+                                                    <div id="img" style="float:left">
+                                                        <img src="../image/lunbo2.jpg" height="86px" width="100px" alt="" >
+                                                    </div>
+                                                    <div style="font-size: 10px;text-align: center;">
+                                                        <div id="box8" >
+                                                            高校思政课堂管理系统
+                                                        </div>
+                                                        <div id="box9"   style="height: 50px;" >
+                                                            官方微信
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 备案号 -->
+                            <div class="footer-ICP" style="text-align: center;color: white;">
+                                <!-- 字体大小不一样 -->
+                               <span style="font-size: 12px;"> 津ICP备案号</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                               <span style="font-size: 10px;"> 技术支持:网络与信息管理中心</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+    
+</html>
+<style type="text/css">
+    .swiper-container{
+      --swiper-theme-color: #ff6600;
+      --swiperge-pagination-color: #00ff33;/* 两种都可以 */
+    }
+    .out{background-color: gray;}
+    .over{background-color: red;}
+    .down{background-color: yellow; }
+
+    
+  </style>
+<script type="text/javascript">
+       window.onload = function(){
+        var mySwiper = new Swiper('.swiper-container',{
+        navigation: {
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
+        },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type : 'progressbar',
+        // },
+        })
+
+        // $(function(){
+        //     var sign=document.getElementById("uu");
+        //     changBkColor(sign);
+        // });
+        // function changBkColor(obj){
+        //     obj.onmouseover=function(){ this.className="over"; };//鼠标悬停事件
+        //     obj.onmouseout=function(){ this.className="out"; };//鼠标离开事件
+        //     obj.onmousedown=function(){this.className="down";};//鼠标点击时触发事件
+        // }
+        $('#myTab a').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+                })
+
+    /*获取HTML中的对象*/
+    var parent = document.getElementById("parent");
+    var img_ul = document.getElementById("img_ul");
+    var litCir_ul = document.getElementById("litCir_ul");
+    var buttons = document.getElementById("buttons");
+    var cLis =litCir_ul.children;
+
+    var len = img_ul.children.length;     //图片张数
+    var width = parent.offsetWidth;       //每张图片的宽度
+    var rate = 15;                        //一张图片的切换速度，单位为px
+    var times = 1;                        //切换速度的倍率
+    var gap = 2000;                       //自动切换间隙，单位为毫秒
+    var timer = null;                     //初始化一个定时器
+    var picN = 0;                         //当前显示的图片下标
+    var cirN = 0;                         //当前显示图片的小圆点下标
+    var now;
+    var then = Date.now();
+    var temp;
+
+    /*克隆第一个li到列表末*/
+    img_ul.appendChild(img_ul.children[0].cloneNode(true));
+    
+    for (var i=0; i<len; i++){
+        var a_li = document.createElement("li");
+        a_li.className = 'quiet';
+        litCir_ul.appendChild(a_li);
+    }
+    litCir_ul.children[0].className = "active";
+
+    function autoRoll(){
+        now = Date.now();
+        var t = now - then;
+        if(t >= gap){
+            if(Roll(-(picN+1)*width)){
+                picN++;
+                cirN++;
+                then = Date.now();
+            }
+            for(var i=0; i<len; i++){
+                cLis[i].className = "quiet";
+            }
+            if(cirN == len){
+                cirN = 0;
+            }
+            cLis[cirN].className = "active";
+            if(picN>=len){
+                img_ul.style.left = 0;
+                picN = 0;
+            }
+        }
+        timer = requestAnimationFrame(autoRoll); 
+    }
+    autoRoll();
+
+    parent.onmouseover = function(){
+        cancelAnimationFrame(timer);
+        buttons.style.display = 'block';
+
+    }
+    parent.onmouseout = function(){
+        timer = requestAnimationFrame(autoRoll);
+        buttons.style.display = 'none';
+    }
+
+    for(var i=0; i<len; i++){
+        cLis[i].index = i;
+        cLis[i].onmouseover = function(){
+            var flag = 0;
+            var rollN = this.index;
+            for(var j=0; j<len; j++){
+                cLis[j].className = "quiet";
+            }
+            this.className = "active";
+            temp = cirN;                           //当前active点
+            picN = cirN = this.index;
+            console.log('this.index:'+this.index);
+            times = Math.abs(this.index - temp);  //距离上个小圆点的距离
+            if(times == 0){
+                return;
+            }
+            console.log('times:'+times);
+            rate = rate*times;                    //根据距离改变切换速率
+            
+            function rollTo(){
+                cancelAnimationFrame(img_ul.timer);
+                if(Roll(-rollN * width)){
+                    flag++;
+                    if(flag == times){
+                        cancelAnimationFrame(img_ul.timer);
+                        rate = 15;
+                        return;
+                    }
+                }
+                img_ul.timer = requestAnimationFrame(rollTo);
+            }
+            rollTo();
+        }
+    }
+
+    /*上一张*/
+    buttons.children[0].onclick = previous;
+    /*下一张*/
+    buttons.children[1].onclick = next;
+
+    function next(){
+        cancelAnimationFrame(img_ul.timer);
+        if(Roll(-(picN+1)*width)){
+            cancelAnimationFrame(img_ul.timer);
+            picN++;
+            cirN++;
+            for(var i=0; i<len; i++){
+                cLis[i].className = "quiet";
+            }
+            if(cirN == len){
+                cirN = 0;
+            }
+            cLis[cirN].className = "active";
+            if(picN>=len){
+                img_ul.style.left = 0;
+                picN = 0;
+            }
+            return;
+        }
+        img_ul.timer = requestAnimationFrame(next);
+    }
+
+    function previous(){
+        if(picN<=0){
+            img_ul.style.left = -len*width + "px";
+            picN = len;
+        }
+        cancelAnimationFrame(img_ul.timer);
+        if(Roll(-(picN-1)*width)){
+            cancelAnimationFrame(img_ul.timer);
+            picN--;
+            cirN--;
+            for(var i=0; i<len; i++){
+                cLis[i].className = "quiet";
+            }
+            if(cirN < 0){
+                cirN = len-1;
+            }
+            cLis[cirN].className = "active";
+            return;
+        }
+        img_ul.timer = requestAnimationFrame(previous);
+    }
+
+    function Roll(distance){
+        var speed = img_ul.offsetLeft < distance ? rate:(0-rate);
+            img_ul.style.left = img_ul.offsetLeft + speed + "px";
+            var leave = distance - img_ul.offsetLeft;
+            if(Math.abs(leave)<=Math.abs(speed)){
+                img_ul.style.left = distance+"px";
+                return 1;                             //切换完一张图片
+            }
+        return 0;
+    }
+}
+
+</script>
